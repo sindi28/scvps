@@ -32,8 +32,8 @@ clear;clear;clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "  Welcome To Script Kanaeru${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Auther : ${green}Tempest® ${NC}${YELLOW}(${NC} ${green} Kanaeru Tunneling ${NC}${YELLOW})${NC}"
-echo -e " © DEV RanTempest${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "  Auther : ${green}Kanaeru® ${NC}${YELLOW}(${NC} ${green} Kanaeru Tunneling ${NC}${YELLOW})${NC}"
+echo -e " © DEV YuushaKanaeru${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -198,7 +198,6 @@ print_install "Membuat direktori xray"
     export Arch=$( uname -m )
     export IP=$( curl -s https://ipinfo.io/ip/ )
 
-    
 # Change Environment System
 function first_setup(){
     timedatectl set-timezone Asia/Jakarta
@@ -455,7 +454,7 @@ EOF
 print_success "Konfigurasi Packet"
 }
 
-function ssh() {
+function ssh(){
 clear
 print_install "Memasang Password SSH"
     wget -O /etc/pam.d/common-password "${REPO}limit/password"
@@ -480,8 +479,6 @@ chmod +x /etc/pam.d/common-password
     debconf-set-selections <<<"keyboard-configuration keyboard-configuration/variantcode string "
     debconf-set-selections <<<"keyboard-configuration keyboard-configuration/variant select English"
     debconf-set-selections <<<"keyboard-configuration keyboard-configuration/xkb-keymap select "
-    judge "Installed dropbear"
-    apt-get install dropbear -y
 
 # go to root
 cd
