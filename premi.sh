@@ -479,6 +479,8 @@ chmod +x /etc/pam.d/common-password
     debconf-set-selections <<<"keyboard-configuration keyboard-configuration/variantcode string "
     debconf-set-selections <<<"keyboard-configuration keyboard-configuration/variant select English"
     debconf-set-selections <<<"keyboard-configuration keyboard-configuration/xkb-keymap select "
+    judge "Installed dropbear"
+    apt-get install dropbear -y
 
 # go to root
 cd
