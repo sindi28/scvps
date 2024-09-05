@@ -198,6 +198,7 @@ print_install "Membuat direktori xray"
     export Arch=$( uname -m )
     export IP=$( curl -s https://ipinfo.io/ip/ )
 
+    
 # Change Environment System
 function first_setup(){
     timedatectl set-timezone Asia/Jakarta
