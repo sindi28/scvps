@@ -454,7 +454,7 @@ EOF
 print_success "Konfigurasi Packet"
 }
 
-function ssh(){
+function ssh() {
 clear
 print_install "Memasang Password SSH"
     wget -O /etc/pam.d/common-password "${REPO}limit/password"
