@@ -33,7 +33,7 @@ echo -e "${YELLOW}----------------------------------------------------------${NC
 echo -e "  Welcome To Script Kanaeru${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
 echo -e "  Auther : ${green}Kanaeru® ${NC}${YELLOW}(${NC} ${green} Kanaeru Tunneling ${NC}${YELLOW})${NC}"
-echo -e " © DEV YuushaKanaeru${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e " © DEV Yuushakanaeru${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -320,7 +320,7 @@ TEXT="
 <code>Exp Sc : </code><code>$EXPSC</code>
 <code>────────────────────</code>
 <i>Automatic Notification from Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/YuushaKanaeru"},{"text":"Contack","url":"https://wa.me/6283141751466"}]]}'"
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/YuushaKanaeru"},{"text":"Contack","url":"https://wa.me/6283141751466"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 
