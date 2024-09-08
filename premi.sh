@@ -292,6 +292,7 @@ read -p "   Subdomain: " host1
 echo "IP=" >> /var/lib/kyt/ipvps.conf
 echo $host1 > /etc/xray/domain
 echo $host1 > /root/domain
+echo " Sabar TOT lagi install"
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
@@ -321,7 +322,7 @@ TEXT="
 <code>────────────────────</code>
 <i>Automatic Notification from Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/YuushaKanaeru"},{"text":"Contack","url":"https://wa.me/6283141751466"}]]}'
-curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+"curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null"
 }
 
 clear
