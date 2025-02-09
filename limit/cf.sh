@@ -11,14 +11,14 @@ echo -e " "
 read -p "SUBDOMAIN :  " domen
 echo -e ""
 #DOMAIN=ranstore.cloud
-DOMAIN=ranstore.cloud
+DOMAIN=allcloud.me
 sub=${domen}
-dns=${sub}.ranstore.cloud
+dns=${sub}.allcloud.me
 #(</dev/urandom tr -dc a-z0-9 | head -c5)
 #dns=${sub}.mypremium.biz.id
 #CF_ID=andyyuda41@gmail.com
 #CF_KEY=0d626234700bad388d6d07b49c42901445d1c
-dns=${sub}.ranstore.cloud
+dns=${sub}.allcloud.me
 CF_KEY=3b4e4274c71496bbbdf858f4c6800aa0380e0
 CF_ID=Rantempest2@gmail.com
 set -euo pipefail
