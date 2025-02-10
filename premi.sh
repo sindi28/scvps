@@ -32,8 +32,8 @@ clear;clear;clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "  Welcome To Script Kanaeru${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Auther : ${green}Kanaeru® ${NC}${YELLOW}(${NC} ${green} Kanaeru Tunneling ${NC}${YELLOW})${NC}"
-echo -e " © DEV Yuushakanaeru${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "  Auther : ${green}YuushaKanaeru® ${NC}${YELLOW}(${NC} ${green} Kanaeru Tunneling ${NC}${YELLOW})${NC}"
+echo -e " © DEV YuushaKanaeru${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -292,7 +292,6 @@ read -p "   Subdomain: " host1
 echo "IP=" >> /var/lib/kyt/ipvps.conf
 echo $host1 > /etc/xray/domain
 echo $host1 > /root/domain
-echo " Sabar TOT lagi install"
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
@@ -309,6 +308,8 @@ restart_system() {
 USRSC=$(wget -qO- https://raw.githubusercontent.com/sindi28/scvps/main/izin | grep $ipsaya | awk '{print $2}')
 EXPSC=$(wget -qO- https://raw.githubusercontent.com/sindi28/scvps/main/izin | grep $ipsaya | awk '{print $3}')
 TIMEZONE=$(printf '%(%H:%M:%S)T')
+CHATID=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 3)
+KEY=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 2)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="
 <code>────────────────────</code>
@@ -323,7 +324,6 @@ TEXT="
 <code>────────────────────</code>
 <i>Automatic Notification from Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/YuushaKanaeru"},{"text":"Contack","url":"https://wa.me/6283141751466"}]]}'
-
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 
